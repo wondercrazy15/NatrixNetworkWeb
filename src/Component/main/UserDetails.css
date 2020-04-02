@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-border {
+  border-style: groove;
+  width: 500px;
+}
+
+.input-box {
+  box-shadow: 1px 1px 5px #888888;
+  border-radius: 1px !important;
+  height: 38px;
+}
+
+.fa {
+  display: flex !important;
+  color: #36a200;
+}
+
+.checkBox {
+  color: #6c757d;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0px !important;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkBox:hover {
+  color: black;
+}
+
+/* Hide original checkbox */
+.checkBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: solid;
+  border-color: gray;
+  border-width: thin;
+  margin-top: 3px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox input:checked ~ .checkmark {
+  background-color: #36a200;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.custom-radio-field {
+  margin-bottom: 0px !important;
+}
+
+.custom-radio-group {
+  /* border: 0px solid transparent !important; */
+  box-shadow: 1px 1px 5px #888888;
+}
+
+.custom-radio-button {
+  color: #6c757d;
+  height: 30px !important;
+  padding: 4px 15px 0px 15px;
+}
+
+.custom-radio-button:hover {
+  color: black;
+}
+
+.custom-btn {
+  background: #36a200 !important;
+  border-radius: 2px !important;
+  font-weight: 500;
+  margin-top: 20px;
+  border-color: #36a200 !important;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+.custom-error {
+  color: red;
+}
